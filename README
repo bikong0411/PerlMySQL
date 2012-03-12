@@ -1,0 +1,29 @@
+It's a MySQL Client for Perl
+Usage:
+USE SKY::MySQL;
+my $mysql = SKY::MySQL->new($host.":".$port,$user,$password,$db); if your port is 3306 you can only write host
+
+fetchRow(Return a hashref):
+$mysql->fetchRow(['your cols/also support *'],{'and|or' => {'your contion = ?' => $val,...}},$table);
+
+fetchAll(Return a arrayref):
+
+$mysql->fetchAll(['your cols/also support *'],{'and|or' => {'your contion = ?' => $val,...}},$table,$order,$offset,$limit);
+$order can be "id desc/asc"
+$limit、$offset are int number
+
+insert(return the row affected):
+
+$mysql->insert({"a"=>"b",...},$table);
+you can use $mysql->lastInsertId() to get the last_insert_id
+
+update(also return a int number the row affected)
+$mysql->update({"a"=>"b",...},{'and|or' => {'your contion = ?' => $val,....}},$table);
+
+
+delete (also return a int number the row affected)
+$mysql->delete({'and|or' => {'your contion = ?' => $val,....}},$table);
+
+execsql (execute your sql statement like join)
+$mysql->execsql($sql)
+
