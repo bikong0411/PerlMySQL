@@ -17,6 +17,11 @@ insert(return the row affected):
 $mysql->insert({"a"=>"b",...},$table);
 you can use $mysql->lastInsertId() to get the last_insert_id
 
+replace(return the row affected):
+
+$mysql->insert({"a"=>"b",...},$table);
+you can use $mysql->lastInsertId() to get the last_insert_id
+
 update(also return a int number the row affected)
 $mysql->update({"a"=>"b",...},{'and|or' => {'your contion = ?' => $val,....}},$table);
 
