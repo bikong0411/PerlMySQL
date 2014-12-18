@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 #a lib for mysqlClient
+#神经经病人思维广，二逼青年欢乐多
 package SKY::MySQL;
 use strict;
 use DBI;
